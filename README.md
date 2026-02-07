@@ -23,3 +23,21 @@ python3 main.py
 - здоровье/мана/золото/KD
 - возрождение героя
 - условие победы по уничтожению башни
+
+## Если в PR появились конфликты
+
+См. пошаговый гайд: `MERGE_CONFLICTS.md`.
+
+Коротко:
+
+```bash
+git fetch origin
+git checkout <your-branch>
+git merge origin/main
+# вручную исправить README.md и main.py
+# удалить маркеры <<<<<<< ======= >>>>>>>
+git add README.md main.py
+git commit -m "Resolve conflicts"
+git push
+```
+
